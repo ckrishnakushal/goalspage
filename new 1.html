@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+.container {
+  height: 50px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<script>
+function initialpt(value) {
+  document.getElementById("Initialpt").value = value;
+  window.text1 = value;
+}
+
+function finalpt(value) {
+  document.getElementById("Finalpt").value = value;
+  window.text2 = value;
+}
+
+function send() {  
+  var result = window.text1 + window.text2;
+  document.getElementById("resultt").value = result;
+}
+</script>
+
+<h1 style="border:2px solid Tomato;text-align:center;">Choose start point</h1>
+<div class="container">
+  <div class="center">
+  <button onclick="initialpt('A')" style="height:30px;width:150px">A</button>
+  <button onclick="initialpt('B')" style="height:30px;width:150px">B</button>
+  <button onclick="initialpt('C')" style="height:30px;width:150px">C</button>
+  <button onclick="initialpt('D')" style="height:30px;width:150px">D</button>  
+  </div>
+</div>
+
+
+<h1 style="border:2px solid Tomato;text-align:center;">Choose final point</h1>
+<div class="container">
+  <div class="center">
+  <button onclick="finalpt('A')" style="height:30px;width:150px">A</button>
+  <button onclick="finalpt('B')" style="height:30px;width:150px">B</button>
+  <button onclick="finalpt('C')" style="height:30px;width:150px">C</button>
+  <button onclick="finalpt('D')" style="height:30px;width:150px">D</button>
+  </div>
+</div>
+
+<h1 style="border:2px solid Tomato;text-align:center;">The Path</h1>
+<div class="container">
+  <div class="center">
+  <input type="text" value="" style="height:20px;width:100px;text-align:center;" id="Initialpt">
+  TO 
+  <input type="text" value="" style="height:20px;width:100px;text-align:center;" id="Finalpt">
+  </div>
+</div>
+
+<div class="container">
+  <div class="center">
+  <button onclick="send()" style="height:30px;width:150px">SEND PATH</button>
+  <input type="text" value="" style="height:20px;width:100px;text-align:center;" id="resultt">
+  </div>
+</div>
+
+</body>
+</html>
